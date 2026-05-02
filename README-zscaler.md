@@ -15,6 +15,7 @@ If on BAH laptop, (examples are using the MS Edge browser) go to https://www.goo
 
 Export the certificate chain to a PEM file, using Base 64, ASCII certificate chain format. 
 ![Format](./assets/png/cert-format.png "select the format")
+Save the file for example to the project folder: ./cert/Zscaler-bundle.pem 
 ```bash
 # local env files
 
