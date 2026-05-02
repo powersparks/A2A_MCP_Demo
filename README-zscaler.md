@@ -27,7 +27,9 @@ Save the file for example to the project folder: ./cert/Zscaler-bundle.pem
 cert/
 ```
 
-In the Dockerfile, the easiest way to add in the bundled certificates is using the environment variable NODE_EXTRA_CA_CERTS. Note: "update-ca-certificates" may not handle the bundled chain.  There is an option to skip the SSL verification, using "RUN npm set strict-ssl false" command. However, the secure way is to apply the certificate chain.  
+In the Dockerfile, the easiest way to add in the bundled certificates is using the environment variable NODE_EXTRA_CA_CERTS. Note: "update-ca-certificates" may not handle the bundled chain.  
+
+An optional approach is to skip the SSL verification, using "RUN npm set strict-ssl false" command. However, the secure way is to apply the certificate chain.  
 
 This change will trust the Zscaler CA certificate chain. below is an example of adding to  the 'base' Docker file build section. Your Dockerfile may be different. Ensure to include the certificates before pulling any remote sources.  
 ```bash
